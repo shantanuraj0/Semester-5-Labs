@@ -1,0 +1,183 @@
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+Last login: Tue Oct  5 16:09:51 2021 from 14.139.197.66
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-21-87 ~]$ docker pull python:3.8-slim
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon runn                                                                                                ing?
+[ec2-user@ip-172-31-21-87 ~]$ sudo service docker start
+Redirecting to /bin/systemctl start docker.service
+
+
+[ec2-user@ip-172-31-21-87 ~]$ docker pull python:3.8-slim
+3.8-slim: Pulling from library/python
+bd897bb914af: Pull complete
+aee78d822213: Pull complete
+6d9f6b5c1e71: Pull complete
+cf9f290bd6be: Pull complete
+5e4b501cbda5: Pull complete
+Digest: sha256:47bcfecfc8b486a6cbd86cf2c67d74a18519ed29d43b5d4ee20692433e81d0a1
+Status: Downloaded newer image for python:3.8-slim
+docker.io/library/python:3.8-slim
+
+
+[ec2-user@ip-172-31-21-87 ~]$ docker images
+REPOSITORY   TAG        IMAGE ID       CREATED      SIZE
+python       3.8-slim   2e56f6b0af69   6 days ago   122MB
+[ec2-user@ip-172-31-21-87 ~]$ docker run -dit --name=pyContainer python:3.8-slim
+ed3631f75fafe4f5cefe3a195ab4c278916e254753fda4c06720655f05ebfd2b
+[ec2-user@ip-172-31-21-87 ~]$ docker container ls
+CONTAINER ID   IMAGE             COMMAND     CREATED          STATUS          PORTS     NAMES
+ed3631f75faf   python:3.8-slim   "python3"   13 seconds ago   Up 12 seconds             pyContainer   
+
+
+                                                                                             
+[ec2-user@ip-172-31-21-87 ~]$ docker exec -it pyContainer /bin/bash
+root@ed3631f75faf:/# python -c"print('hello world')"
+hello world
+
+
+root@ed3631f75faf:/# ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+
+
+root@ed3631f75faf:/# exit
+exit
+
+
+
+[ec2-user@ip-172-31-21-87 ~]$ docker container stop pyContainer
+pyContainer
+[ec2-user@ip-172-31-21-87 ~]$ docker container rm pyContainer
+pyContainer
+[ec2-user@ip-172-31-21-87 ~]$ docker container rm pyContainer
+Error: No such container: pyContainer
+[ec2-user@ip-172-31-21-87 ~]$ mkdir testfolder
+[ec2-user@ip-172-31-21-87 ~]$ pwd
+/home/ec2-user
+
+
+[ec2-user@ip-172-31-21-87 ~]$ docker run -dit --name=pyC -v /home/ec2-user/testfolder:/myfold                                                                                                er python:3.8-slim
+b35ab7b453e55870cbb76bb815119c4f45f3a94dc5205adc2af569fcc3e6418d
+
+
+
+[ec2-user@ip-172-31-21-87 ~]$ docker exec -it pyC /bin/bash
+
+
+root@b35ab7b453e5:/# ls
+bin   dev  home  lib64  mnt       opt   root  sbin  sys  usr
+boot  etc  lib   media  myfolder  proc  run   srv   tmp  var
+
+
+root@b35ab7b453e5:/# cd myfolder
+
+
+
+root@b35ab7b453e5:/myfolder# python -c"print('hello world')"
+hello world
+
+
+root@b35ab7b453e5:/myfolder# exit
+exit
+
+
+[ec2-user@ip-172-31-21-87 ~]$ pwd
+/home/ec2-user
+
+[ec2-user@ip-172-31-21-87 ~]$ ls
+testfolder
+
+[ec2-user@ip-172-31-21-87 ~]$ cd testfolder
+
+[ec2-user@ip-172-31-21-87 testfolder]$ ls
+!!  clo.py  main.py
+
+
+
+[ec2-user@ip-172-31-21-87 testfolder]$ docker exec -it pyC /bin/bash
+root@b35ab7b453e5:/# ls
+
+bin   dev  home  lib64  mnt       opt   root  sbin  sys  usr
+boot  etc  lib   media  myfolder  proc  run   srv   tmp  var
+
+
+root@b35ab7b453e5:/# cd myfolder
+
+
+root@b35ab7b453e5:/myfolder# ls
+'!!'   clo.py   main.py
+
+
+root@b35ab7b453e5:/myfolder# python main.py
+point one [1, 2, 3, 4, 5] point two  [4, 5, 6, 7, 8]
+Normal Distance  6.708203932499369
+Eucleaden Distance  6.708203932499369
+Manhattan Distance  15
+Jaccardian Distance  0.75
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+login as: ec2-user
+Authenticating with public key "imported-openssh-key"
+Last login: Tue Oct  5 17:04:39 2021 from 14.139.197.66
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-21-87 ~]$ ls
+testfolder
+[ec2-user@ip-172-31-21-87 ~]$ cd testfolder
+[ec2-user@ip-172-31-21-87 testfolder]$ ls
+!!  cloud.py
+[ec2-user@ip-172-31-21-87 testfolder]$ rm !!  cloud.py
+rm ls  cloud.py
+rm: cannot remove ‘ls’: No such file or directory
+rm: remove write-protected regular empty file ‘cloud.py’? y
+[ec2-user@ip-172-31-21-87 testfolder]$ ls
+!!
+[ec2-user@ip-172-31-21-87 testfolder]$ vi cloud.py
+[ec2-user@ip-172-31-21-87 testfolder]$ vi clo.py
+[ec2-user@ip-172-31-21-87 testfolder]$ docker exec -it pyC /bin/bash
+root@b35ab7b453e5:/# pwd
+/
+root@b35ab7b453e5:/# ls
+bin  boot  dev  etc  home  lib  lib64  media  mnt  myfolder  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+root@b35ab7b453e5:/# cd myfolder
+root@b35ab7b453e5:/myfolder# ls
+'!!'   clo.py
+root@b35ab7b453e5:/myfolder# python clo.py
+The distance is :  10.63014581273465
+root@b35ab7b453e5:/myfolder#
+
+
+

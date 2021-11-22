@@ -1,0 +1,45 @@
+
+
+**Dont install docker in EC2 space wont be sufficient, do it in your local machine
+**Docker file no change, keep it as it is.
+
+
+**q2,q3,Dockerfile must be in testfolder
+
+1. Docker build D:\useful\sem 5\2.cloud computing\lab\7.lab7
+
+command : docker images => will list the docker images.. ( take the image id which is around 4.1 GB)
+
+2. docker run -d -it --name=pyC -v "D:\useful\sem 5\2.cloud computing\lab\7.lab7":/shared 537dae4b323c   => this is image ID( different for different users)
+
+3. docker exec -it pyC /bin/bash
+
+inside container 
+
+
+
+4. 
+
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-*.jar -input /shared/inputfile.txt -output /shared/q1_output -mapper "python3 /shared/q1/mapper.py" -reducer "python3 /shared/q1/reducer.py"
+
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-*.jar -input /shared/inputfile.txt -output /shared/q2_output -mapper "python3 /shared/q2/mapper.py" -combiner "python3 /shared/q2/combiner.py"
+
+
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-*.jar -input /shared/iris.data -output /shared/q3_1 -mapper "python3 /shared/q3/mapper.py" -reducer "python3 /shared/q3/reducer.py" -combiner "python3 /shared/q3/combiner.py"
+
+** output will be in the folder /myfolder/q2Output respectively for other command, open the file ("part-00000") which is present in the  /myfolder/q2Output
+
+
+
+
+to remove the image
+
+6*. docker rmi imageID
+
+To stop and remove the container
+
+7*. docker container stop containerName
+
+8*. docker container rm containerName
+
+

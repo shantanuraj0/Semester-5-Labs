@@ -1,0 +1,35 @@
+docker run -d -it --name=pyC -v "D:\useful\sem 5\2.cloud computing\lab\8.lab8":/shared 537dae4b323c
+
+docker exec -it pyC /bin/bash
+
+
+1)
+
+
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-*.jar -input /shared/big.txt -output /shared/q1_out -mapper "python3 /shared/q1/mapper.py" -reducer "python3 /shared/q1/reducer.py"
+
+
+
+2)
+
+
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-*.jar -input /shared/big.txt -output /shared/q2_out -mapper "python3 /shared/q2/mapper2.py" -reducer "python3 /shared/q2/reducer2.py"
+
+
+3)
+
+
+
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-*.jar -input /shared/big.txt -output /shared/q3_out -mapper "python3 /shared/q3/mapper3.py" -reducer "python3 /shared/q3/reducer3.py" -combiner "python3 /shared/q3/combiner3.py"
+
+
+
+4)
+
+
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-*.jar -input /shared/big.txt -output /shared/q4_out -mapper "python3 /shared/q4/mapper4.py" -reducer "python3 /shared/q4/reducer4.py"
+
+
+
+
+

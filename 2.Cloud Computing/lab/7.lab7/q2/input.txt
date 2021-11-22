@@ -1,0 +1,4 @@
+This is the input file for the Hadoop assignment test. Hello,, there
+hello
+hello 
+hello

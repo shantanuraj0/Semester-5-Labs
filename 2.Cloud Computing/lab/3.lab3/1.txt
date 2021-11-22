@@ -1,0 +1,190 @@
+CS FUNDAMENTAL LIST
+data structures you use to store network connection like social network- Graph
+
+21 output
+
+F4(n),f1(n),f3(n),f2(n)
+
+data structures you use to store network connection like social network- Graph
+
+finalize() is called by the garbage collector on ---> object is unreachable
+
+Dynamic pr8
+
+How do you display border 
+Right 20 px
+Left 15px
+Bottom 5px
+Top 1px
+----------> 1px 20px 5px 15px
+
+Run() and join()
+
+Best algo for finding peak element -> divide and conq
+Class thread methods in java---> D 
+
+Class threads method in java ---. D
+
+Binomial Coefficient 
+
+Prefix expression--> 34
+
+A list of n strings each of length n:- O(n^2logn)
+
+prefix expression +,-,*,8,4,/,6,2,5:- 34
+
+n-ary tree 14 internal nodes 29 leaf nodes:- 3
+
+new element inserted in red black tree:- red, if node is not a root node
+
+output: classSum{, void calc, int change:- 15 15
+
+which methods are present in class thread:- run(),wait(),exit()
+
+If one uses straight two way merge sort algo:- Option A
+
+Five elements 2,4,6,8,10 are inserted into a queue --> 2,4,6
+
+In a modified merge sort, the input array is splitted at a position one-third of the length(N) of the array -> T(N) = 3T(N/3) + N 
+
+n1==n2 Num1==num2
+
+You are given a figure starting at vertex M...  --> (M,S), then (M,N) then (N,O)
+
+
+DEQUE question ...> 2,9
+
+public class MyRunnable implements Runnable 
+{ -> new Thread(new MyRunnable()).start()
+
+Catalan numbers -> Binomial coef
+
+
+
+  Keep on adding here.......
+
+
+CS FUNDAMENTAL LIST
+data structures you use to store network connection like social network- Graph
+
+21 output
+
+F4(n),f1(n),f3(n),f2(n)
+
+data structures you use to store network connection like social network- Graph
+
+finalize() is called by the garbage collector on ---> object is unreachable
+
+Dynamic pr8
+
+How do you display border 
+Right 20 px
+Left 15px
+Bottom 5px
+Top 1px
+----------> 1px 20px 5px 15px
+
+Run() and join()
+
+Best algo for finding peak element -> divide and conq
+Class thread methods in java---> D 
+
+Class threads method in java ---. D
+
+Binomial Coefficient 
+
+Prefix expression--> 34
+
+A list of n strings each of length n:- O(n^2logn)
+
+prefix expression +,-,*,8,4,/,6,2,5:- 34
+
+n-ary tree 14 internal nodes 29 leaf nodes:- 3
+
+new element inserted in red black tree:- red, if node is not a root node
+
+output: classSum{, void calc, int change:- 15 15
+
+which methods are present in class thread:- run(),wait(),exit()
+
+If one uses straight two way merge sort algo:- Option A
+
+Five elements 2,4,6,8,10 are inserted into a queue --> 2,4,6
+
+In a modified merge sort, the input array is splitted at a position one-third of the length(N) of the array -> T(N) = 3T(N/3) + N 
+
+n1==n2 Num1==num2
+
+You are given a figure starting at vertex M...  --> (M,S), then (M,N) then (N,O)
+
+
+DEQUE question ...> 2,9
+
+public class MyRunnable implements Runnable 
+{ -> new Thread(new MyRunnable()).start()
+
+Catalan numbers -> Binomial coef
+CS FUNDAMENTAL LIST
+data structures you use to store network connection like social network- Graph
+
+21 output
+
+F4(n),f1(n),f3(n),f2(n)
+
+data structures you use to store network connection like social network- Graph
+
+finalize() is called by the garbage collector on ---> object is unreachable
+
+Dynamic pr8
+
+How do you display border 
+Right 20 px
+Left 15px
+Bottom 5px
+Top 1px
+----------> 1px 20px 5px 15px
+
+Run() and join()
+
+Best algo for finding peak element -> divide and conq
+Class thread methods in java---> D 
+
+Class threads method in java ---. D
+
+Binomial Coefficient 
+
+Prefix expression--> 34
+
+A list of n strings each of length n:- O(n^2logn)
+
+prefix expression +,-,*,8,4,/,6,2,5:- 34
+
+n-ary tree 14 internal nodes 29 leaf nodes:- 3
+
+new element inserted in red black tree:- red, if node is not a root node
+
+output: classSum{, void calc, int change:- 15 15
+
+which methods are present in class thread:- run(),wait(),exit()
+
+If one uses straight two way merge sort algo:- Option A
+
+Five elements 2,4,6,8,10 are inserted into a queue --> 2,4,6
+
+In a modified merge sort, the input array is splitted at a position one-third of the length(N) of the array -> T(N) = 3T(N/3) + N 
+
+n1==n2 Num1==num2
+
+You are given a figure starting at vertex M...  --> (M,S), then (M,N) then (N,O)
+
+
+DEQUE question ...> 2,9
+
+public class MyRunnable implements Runnable 
+{ -> new Thread(new MyRunnable()).start()
+
+Catalan numbers -> Binomial coef
+peak points - using divide and conquer onlogn
+mongoose js - mongodb
+average grade in arithmetic - 90
+output of following -> in parent 0 in child 1

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+
+   
+
+        <% if(complaints.length == 0) { %>
+            
+            <h1 class="text-center">No Complaints Register</h1>
+           <% } else { %>  
+
+        <% for(let complaint of  complaints) { %> 
+          <p><%=complaint.Complaint%></p>
+          <p><%=complaint.Name%></p>
+
+          <% }%>  
+
+         <% } %>  
+
+    
+
+    <h1 class="text-center">Fill this form to register a complaint</h1>
+
+
+    <form action="/register" class="mx-auto, p-5" method="POST">    
+        
+        
+          <div class="mb-3 px-auto">
+            <label for="exampleFormControlTextarea1" class="form-label">Enter your Complain</label>
+            <textarea  name="complaint" class="form-control" placeholder="Enter Your Complaint" id="exampleFormControlTextarea1" rows="6"></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Enter Your Name</label>
+            <input name="name" type="text" class="form-control w-4" id="exampleFormControlInput1" >
+          </div>
+
+          <button class=" btn btn-primary btn-lg " type="submit"> Register</button>
+    </form>
+
+   
+
+  </body>
+</html>
